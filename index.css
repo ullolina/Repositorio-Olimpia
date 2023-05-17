@@ -1,0 +1,10 @@
+@keyframes fade-in-out {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  
+  .animacion-imagen {
+    animation: fade-in-out 6s ease-in-out infinite;
+  }
+  
