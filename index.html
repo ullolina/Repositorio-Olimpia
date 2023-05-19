@@ -1,117 +1,216 @@
 <!DOCTYPE html>
-<html lang="es">
-    <head>
-        <link rel="stylesheet" href="estilos.css">
-      </head>
-      <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Historia de OLIMPIA</title>
+<html>
+<head>
+    <link rel="stylesheet" href="index.css">
+
+<title>Formulario de Inscripción</title>
   <style>
-    /* Estilos generales */
     body {
+      font-family: "Phudu", cursive;
       background-color: #1e3a63;
+      color: white;
       margin: 0;
       padding: 0;
     }
 
-    h1, h2, h3 {
-      font-family: "Phudu", cursive;
-      font-weight: bold;
-      color: #ffffff;
+    #logo {
+      width: 300px;
+      height: auto;
     }
 
-    h1 {
-      font-size: 36px;
+    .formulario {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #2d4f7c;
+      box-sizing: border-box;
     }
 
     h2 {
-      font-size: 36px;
-    }
-
-    h3 {
       font-size: 24px;
-      color: #40E0D0;
+      text-align: center;
+      margin-top: 0;
     }
 
-    /* Estilos específicos para dispositivos móviles */
-    @media only screen and (max-width: 600px) {
-      h1 {
-        font-size: 24px;
-      }
-
-      h2 {
-        font-size: 24px;
-      }
-
-      h3 {
-        font-size: 18px;
-      }
+    .campo {
+      margin-bottom: 20px;
     }
 
-    /* Estilos para imágenes */
-    img {
-      max-width: 100%; /* Hace que las imágenes se ajusten al ancho del contenedor */
-      height: auto; /* Mantiene la proporción de aspecto de las imágenes */
+    label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+
+    input[type="text"],
+    textarea {
+      width: 100%;
+      padding: 10px;
+      border: none;
+      background-color: #e1e1e1;
+      color: #1e3a63;
+    }
+
+    input[type="submit"] {
+      background-color: #1e3a63;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      cursor: pointer;
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1>La historia de OLIMPIA</h1>
-    <nav>
-      <ul>
-        <li><a href="#inicio">Inicio</a></li>
-        <li><a href="#historia">Historia</a></li>
-        <li><a href="#equipo">Equipo</a></li>
-        <li><a href="#contacto">Contacto</a></li>
-      </ul>
-    </nav>
-  </header>
-  <main>
-    <section id="inicio" class="animacion">
-      <h2>Bienvenidos a OLIMPIA</h2>
-      <p>Desde hace años, Olimpia comenzó con la pasión familiar por el fitness y la salud. Somos un equipo de profesionales apasionados por el deporte y el bienestar, dedicados a ayudar a nuestros clientes a alcanzar sus objetivos y calidad de vida. Ofrecemos una amplia gama de servicios para adaptarse a las necesidades de cada persona, desde entrenamiento personalizado en Boxeo, Acrobacias aéreas, Gap, Taekwondo, Kung-fu Shaolin, Yoga y clases grupales hasta planes de nutrición y asesoramiento en estilo de vida. Hemos sido apasionados del deporte y la vida saludable. Por eso, decidimos crear nuestro espacio y ayudarlos a alcanzar sus objetivos.</p>
-      <img src="Imagenes/shutterstock_499280881-1.webp" alt="Imagen de inicio">
+  <section class="formulario">
+    <img id="logo" src="./logoOLIMPIA.jpeg" alt="Logo de Olimpia">
+    <h2>FORMULARIO DE INSCRIPCIÓN</h2>
+
+    <section class="campo">
+      <label for="n_socio">N de socio:</label>
+      <input type="text" id="n_socio" name="n_socio" required>
     </section>
-    <section id="historia" class="animacion">
-      <h2>Nuestra historia</h2>
-      <section class="contenedor">
-        <section>
-          <h3>Inicio del proyecto</h3>
-          <p>Todo empezó como un sueño. Teníamos la idea de crear un espacio acogedor y motivador donde las personas pudieran entrenar y llevar una vida más saludable. Después de muchos meses de planificación y trabajo duro, finalmente abrimos las puertas de nuestro gimnasio.El proceso de creación de nuestro gimnasio fue un viaje lleno de desafíos, pero cada obstáculo nos brindó la oportunidad de aprender y crecer. La primera tarea fue encontrar el lugar perfecto para establecer nuestro gimnasio. Queríamos una ubicación accesible, con suficiente espacio y una buena conexión con la comunidad local. Después de una exhaustiva búsqueda, encontramos un lugar que cumplía con todos nuestros requisitos y nos emocionó la posibilidad de transformarlo en nuestro espacio de entrenamiento ideal.</p>
-            <img src="Imagenes/Copia de 59f230c0-758f-40cd-9458-daa4fe94273d.png" style="animation:fade-in-out infinite">
-            
-            </section>
-            <section>
-            <h3>Primeros clientes</h3>
-            <p>Desde el momento en que abrimos las puertas de nuestro gimnasio, nos sentimos abrumados por la emoción y la anticipación de comenzar este nuevo capítulo en nuestras vidas. Habíamos dedicado meses enteros a planificar y trabajar arduamente para convertir nuestra visión en realidad, y finalmente llegó el día en que pudimos dar la bienvenida a nuestros primeros clientes.Al principio, no teníamos muchos clientes, pero poco a poco fuimos ganando su confianza gracias a nuestra atención personalizada y la calidad de nuestros servicios. Cada día llegaban más personas buscando un lugar donde ejercitarse y mejorar su salud.</p>
-            <img src="Imagenes/3ea391bf-6621-410f-a431-cf32872a0ee5.JPG" alt="Imagen de los primeros clientes">
-            </section>
-            <section>
-            <h3>Expansión y crecimiento</h3>
-            <p>Expansión y crecimiento
-                Pero nuestro gimnasio no se trata solo de máquinas y equipos. Sabíamos que el factor humano era fundamental para brindar
-                una experiencia excepcional a nuestros clientes. Por eso nos tomamos el tiempo para seleccionar cuidadosamente a un
-                equipo de entrenadores altamente capacitados y apasionados. Buscamos profesionales con experiencia en diversas
-                disciplinas y con habilidades interpersonales excepcionales. Con el tiempo, nuestro gimnasio se convirtió en un
-                referente en la zona, gracias a nuestro enfoque en la calidad y el servicio al cliente. Pronto estaremos abriendo nuevas
-                sucursales...</p>
-            <img src="Imagenes/istock-517964008.jpg" alt="Imagen de la expansión y crecimiento">
-            </section>
-            </section>
-            </section>
-            
-              </main>
-              <footer>
-                <p>© 2023 OLIMPIA. Todos los derechos reservados.</p>
-              </footer>
-            </body>
-            </html>
-            
-            
-            
-            
-            
-            
-            
-            
+
+    <section class="campo">
+      <label for="apellido_nombre">Apellido y Nombre:</label>
+      <input type="text" id="apellido_nombre" name="apellido_nombre" required>
+    </section>
+
+    <section class="campo">
+      <label for="direccion">Dirección:</label>
+      <input type="text" id="direccion" name="direccion" required>
+    </section>
+
+    <section class="campo">
+      <label for="localidad">Localidad:</label>
+      <input type="text" id="localidad" name="localidad" required>
+    </section>
+
+    <section class="campo">
+      <label for="fecha_nacimiento">Fecha de Nacimiento:</label>
+      <input type="text" id="fecha_nacimiento" name="fecha_nacimiento" required>
+    </section>
+
+    <section class="campo">
+      <label for="edad">Edad:</label>
+      <input type="text" id="edad" name="edad" required>
+    </section>
+
+    <section class="campo">
+      <label for="dni">DNI:</label>
+      <input type="text" id="dni" name="dni" required>
+    </section>
+
+    <section class="campo">
+      <label for="telefono">Teléfono:</label>
+      <input type="text" id="telefono" name="telefono" required>
+    </section>
+
+    <section class="campo">
+      <label for="email">E-mail:</label>
+      <input type="text" id="email" name="email" required>
+    </section>
+
+    <section class="campo">
+      <label for="actividad_fisica">¿Realiza actividad física?</label>
+      <input type="text" id="actividad_fisica" name="actividad_fisica" required>
+    </section>
+
+    <section class="campo">
+      <label for="actividad_fisica_tipo">¿Cuál?</label>
+      <input type="text" id="actividad_fisica_tipo" name="actividad_fisica_tipo" required>
+    </section>
+
+    <section class="campo">
+      <label for="fuma">¿Fuma?</label>
+      <input type="text" id="fuma" name="fuma" required>
+    </section>
+
+    <section class="campo">
+      <label for="peso">Peso:</label>
+      <input type="text" id="peso" name="peso" required>
+    </section>
+
+    <section class="campo">
+      <label for="grupo_sanguineo">Grupo sanguíneo:</label>
+      <input type="text" id="grupo_sanguineo" name="grupo_sanguineo" required>
+    </section>
+
+    <section class="campo">
+      <label for="hipertenso">Hipertenso</label>
+      <input type="checkbox" id="hipertenso" name="hipertenso">
+      <label for="alta">Alta</label>
+      <input type="checkbox" id="alta" name="alta">
+      <label for="baja">Baja</label>
+      <input type="checkbox" id="baja" name="baja">
+    </section>
+
+    <section class="campo">
+      <label for="lesiones">Lesiones:</label>
+      <input type="text" id="lesiones" name="lesiones" required>
+    </section>
+
+    <section class="campo">
+      <label for="alergias">Alergias:</label>
+      <input type="text" id="alergias" name="alergias" required>
+    </section>
+
+    <section class="campo">
+      <label for="enfermedades_cronicas">Enfermedades Crónicas:</label>
+      <input type="text" id="enfermedades_cronicas" name="enfermedades_cronicas" required>
+    </section>
+
+    <section class="campo">
+      <label for="antecedentes">Antecedentes:</label>
+      <input type="text" id="antecedentes" name="antecedentes" required>
+    </section>
+
+    <h2 style="text-align: center;">EN CASO DE EMERGENCIA</h2>
+
+    <section class="campo">
+      <label for="nombre_emergencia">Apellido y Nombre:</label>
+      <input type="text" id="nombre_emergencia" name="nombre_emergencia" required>
+    </section>
+
+    <section class="campo">
+      <label for="parentesco">Parentesco:</label>
+      <input type="text" id="parentesco" name="parentesco" required>
+    </section>
+
+    <section class="campo">
+      <label for="direccion_emergencia">Dirección:</label>
+      <input type="text" id="direccion_emergencia" name="direccion_emergencia" required>
+    </section>
+
+    <section class="campo">
+      <label for="localidad_emergencia">Localidad:</label>
+      <input type="text" id="localidad_emergencia" name="localidad_emergencia" required>
+    </section>
+
+    <section class="campo">
+      <label for="telefono_emergencia">Teléfono:</label>
+      <input type="text" id="telefono_emergencia" name="telefono_emergencia" required>
+    </section>
+
+    <section class="campo">
+      <label for="declaracion_a">A. Yo... (Nombre y Apellido), soy consciente de que gozo de buena salud y no tengo problemas físicos que pongan en peligro mi integridad o la de otros socios.</label>
+      <input type="text" id="declaracion_a" name="declaracion_a" required>
+    </section>
+
+    <section class="campo">
+      <label for="declaracion_b">B. Me comprometo a entregar mi Certificado de Actitud Física dentro de los 20 días como plazo máximo.</label>
+      <input type="text" id="declaracion_b" name="declaracion_b" required>
+    </section>
+
+    <section class="campo">
+      <label for="fecha_documentacion">Completó Documentación en la fecha:</label>
+      <input type="text" id="fecha_documentacion" name="fecha_documentacion" required>
+    </section>
+
+    <p>El gimnasio no se hace responsable por objetos que se puedan extraviar.</p>
+
+    <input type="submit" value="Enviar">
+  </section>
+</body>
+</html>
+
+

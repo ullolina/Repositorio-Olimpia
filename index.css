@@ -1,10 +1,21 @@
-@keyframes fade-in-out {
-    0% { opacity: 1; }
-    50% { opacity: 0; }
-    100% { opacity: 1; }
+body {
+    background: linear-gradient(to bottom, #1e3a63, #7db9e8);
+  }
+  button {
+    transition: background-color 0.3s ease;
   }
   
-  .animacion-imagen {
-    animation: fade-in-out 6s ease-in-out infinite;
+  button:hover {
+    background-color: #ffcc00;
+  }
+  @keyframes mover {
+    0% { left: 0; }
+    50% { left: 50%; }
+    100% { left: 100%; }
   }
   
+  .elemento {
+    position: relative;
+    animation: mover 3s infinite;
+  }
+    
