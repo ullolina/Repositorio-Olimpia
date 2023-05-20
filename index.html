@@ -3,214 +3,320 @@
 <head>
     <link rel="stylesheet" href="index.css">
 
-<title>Formulario de Inscripción</title>
-  <style>
-    body {
-      font-family: "Phudu", cursive;
-      background-color: #1e3a63;
-      color: white;
-      margin: 0;
-      padding: 0;
-    }
+    <title>Formulario de Inscripción</title>
+    <style>
+        body {
+            font-family: "Phudu", cursive;
+            background-color: #1e3a63;
+            color: white;
+            margin: 0;
+            padding: 0;
+        }
 
-    #logo {
-      width: 300px;
-      height: auto;
-    }
+        #logo {
+            width: 300px;
+            height: auto;
+        }
 
-    .formulario {
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 20px;
-      background-color: #2d4f7c;
-      box-sizing: border-box;
-    }
+        .formulario {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #2d4f7c;
+            box-sizing: border-box;
+        }
 
-    h2 {
-      font-size: 24px;
-      text-align: center;
-      margin-top: 0;
-    }
+        h2 {
+            font-size: 24px;
+            text-align: center;
+            margin-top: 0;
+        }
 
-    .campo {
-      margin-bottom: 20px;
-    }
+        .campo {
+            margin-bottom: 20px;
+        }
 
-    label {
-      display: block;
-      font-weight: bold;
-      margin-bottom: 5px;
-    }
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
 
-    input[type="text"],
-    textarea {
-      width: 100%;
-      padding: 10px;
-      border: none;
-      background-color: #e1e1e1;
-      color: #1e3a63;
-    }
+        input[type="text"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            background-color: #e1e1e1;
+            color: #1e3a63;
+        }
 
-    input[type="submit"] {
-      background-color: #1e3a63;
-      color: white;
-      padding: 10px 20px;
-      border: none;
-      cursor: pointer;
-    }
-  </style>
+        input[type="submit"] {
+            background-color: #1e3a63;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+
+    <script>
+        window.onload = function () {
+            document.getElementById("formulario-inscripcion").addEventListener("submit", function (event) {
+                event.preventDefault();
+                enviarFormulario();
+            });
+        };
+
+        function enviarFormulario() {
+            var n_socio = document.getElementById("n_socio").value;
+            var apellido_nombre = document.getElementById("apellido_nombre").value;
+            var direccion = document.getElementById("direccion").value;
+            var localidad = document.getElementById("localidad").value;
+            var fecha_nacimiento = document.getElementById("fecha_nacimiento").value;
+            var edad = document.getElementById("edad").value;
+            var dni = document.getElementById("dni").value;
+            var telefono = document.getElementById("telefono").value;
+            var email = document.getElementById("email").value;
+            var actividad_fisica = document.getElementById("actividad_fisica").value;
+            var actividad_fisica_tipo = document.getElementById("actividad_fisica_tipo").value;
+            var fuma = document.getElementById("fuma").value;
+            var peso = document.getElementById("peso").value;
+            var grupo_sanguineo = document.getElementById("grupo_sanguineo").value;
+            var hipertenso = document.getElementById("hipertenso").checked;
+            var alta = document.getElementById("alta").checked;
+            var baja = document.getElementById("baja").checked;
+            var lesiones = document.getElementById("lesiones").value;
+            var alergias = document.getElementById("alergias").value;
+            var enfermedades_cronicas = document.getElementById("enfermedades_cronicas").value;
+            var antecedentes = document.getElementById("antecedentes").value;
+            var nombre_emergencia = document.getElementById("nombre_emergencia").value;
+            var parentesco = document.getElementById("parentesco").value;
+            var direccion_emergencia = document.getElementById("direccion_emergencia").value;
+            var localidad_emergencia = document.getElementById("localidad_emergencia").value;
+            var telefono_emergencia = document.getElementById("
+
+telefono_emergencia").value;
+            var declaracion_a = document.getElementById("declaracion_a").value;
+            var declaracion_b = document.getElementById("declaracion_b").value;
+            var fecha_documentacion = document.getElementById("fecha_documentacion").value;
+
+            var mensaje =
+                "N de socio: " + n_socio + "<br>" +
+                "Apellido y Nombre: " + apellido_nombre + "<br>" +
+                "Dirección: " + direccion + "<br>" +
+                "Localidad: " + localidad + "<br>" +
+                "Fecha de Nacimiento: " + fecha_nacimiento + "<br>" +
+                "Edad: " + edad + "<br>" +
+                "DNI: " + dni + "<br>" +
+                "Teléfono: " + telefono + "<br>" +
+                "E-mail: " + email + "<br>" +
+                "¿Realiza actividad física?: " + actividad_fisica + "<br>" +
+                "¿Cuál?: " + actividad_fisica_tipo + "<br>" +
+                "¿Fuma?: " + fuma + "<br>" +
+                "Peso: " + peso + "<br>" +
+                "Grupo sanguíneo: " + grupo_sanguineo + "<br>" +
+                "Hipertenso: " + hipertenso + "<br>" +
+                "Alta: " + alta + "<br>" +
+                "Baja: " + baja + "<br>" +
+                "Lesiones: " + lesiones + "<br>" +
+                "Alergias: " + alergias + "<br>" +
+                "Enfermedades Crónicas: " + enfermedades_cronicas + "<br>" +
+                "Antecedentes: " + antecedentes + "<br>" +
+                "<h2 style='text-align: center;'>EN CASO DE EMERGENCIA</h2>" +
+                "Apellido y Nombre: " + nombre_emergencia + "<br>" +
+                "Parentesco: " + parentesco + "<br>" +
+                "Dirección: " + direccion_emergencia + "<br>" +
+                "Localidad: " + localidad_emergencia + "<br>" +
+                "Teléfono: " + telefono_emergencia + "<br>" +
+                "A. Yo... (Nombre y Apellido), soy consciente de que gozo de buena salud y no tengo problemas físicos que pongan en peligro mi integridad o la de otros socios: " + declaracion_a + "<br>" +
+                "B. Me comprometo a entregar mi Certificado de Actitud Física dentro de los 20 días como plazo máximo: " + declaracion_b + "<br>" +
+                "Completó Documentación en la fecha: " + fecha_documentacion;
+
+            Email.send({
+                SecureToken: "fakeTOKEN",
+                To: "to@example.com",
+                From: "olimpia@gmail.com",
+                Subject: "Formulario de Inscripción",
+                Body: mensaje
+            }).then(function (response) {
+                if (response === "OK") {
+                    alert("Formulario enviado correctamente");
+                    document.getElementById("formulario-inscripcion").reset();
+                } else {
+                    alert("Error al enviar el formulario");
+                }
+            });
+        }
+    </script>
 </head>
 <body>
-  <section class="formulario">
-    <img id="logo" src="./logoOLIMPIA.jpeg" alt="Logo de Olimpia">
-    <h2>FORMULARIO DE INSCRIPCIÓN</h2>
+    <section class="formulario">
+        <img id="logo" src="./logoOLIMPIA.jpeg" alt="Logo de Olimpia">
+        <h2>FORMULARIO DE INSCRIPCIÓN</h2>
 
-    <section class="campo">
-      <label for="n_socio">N de socio:</label>
-      <input type="text" id="n_socio" name="n_socio" required>
+        <form id="formulario-inscripcion">
+            <section
+
+ class="campo">
+                <label for="n_socio">N° de socio:</label>
+                <input type="text" id="n_socio" name="n_socio" required>
+            </section>
+
+            <section class="campo">
+                <label for="apellido_nombre">Apellido y Nombre:</label>
+                <input type="text" id="apellido_nombre" name="apellido_nombre" required>
+            </section>
+
+            <section class="campo">
+                <label for="direccion">Dirección:</label>
+                <input type="text" id="direccion" name="direccion" required>
+            </section>
+
+            <section class="campo">
+                <label for="localidad">Localidad:</label>
+                <input type="text" id="localidad" name="localidad" required>
+            </section>
+
+            <section class="campo">
+                <label for="fecha_nacimiento">Fecha de Nacimiento:</label>
+                <input type="text" id="fecha_nacimiento" name="fecha_nacimiento" required>
+            </section>
+
+            <section class="campo">
+                <label for="edad">Edad:</label>
+                <input type="text" id="edad" name="edad" required>
+            </section>
+
+            <section class="campo">
+                <label for="dni">DNI:</label>
+                <input type="text" id="dni" name="dni" required>
+            </section>
+
+            <section class="campo">
+                <label for="telefono">Teléfono:</label>
+                <input type="text" id="telefono" name="telefono" required>
+            </section>
+
+            <section class="campo">
+                <label for="email">E-mail:</label>
+                <input type="text" id="email" name="email" required>
+            </section>
+
+            <section class="campo">
+                <label for="actividad_fisica">¿Realiza actividad física?</label>
+                <input type="text" id="actividad_fisica" name="actividad_fisica" required>
+            </section>
+
+            <section class="campo">
+                <label for="actividad_fisica_tipo">¿Cuál?</label>
+                <input type="text" id="actividad_fisica_tipo" name="actividad_fisica_tipo" required>
+            </section>
+
+            <section class="campo">
+                <label for="fuma">¿Fuma?</label>
+                <input type="text" id="fuma" name="fuma" required>
+            </section>
+
+            <section class="campo">
+                <label for="peso">Peso:</label>
+                <input type="text" id="peso" name="peso" required>
+            </section>
+
+            <section class="campo">
+                <label for="grupo_sanguineo">Grupo sanguíneo:</label>
+                <input type="text" id="grupo_sanguineo" name="grupo_sanguineo" required>
+            </section>
+
+            <section class="campo">
+                <label for="hipertenso">Hipertenso:</label>
+                <input type="checkbox" id="hipertenso" name="hipertenso">
+            </section>
+
+            <section class="campo">
+                <label for="alta">Alta:</label>
+                <input type="checkbox" id="alta" name="alta">
+            </section>
+
+            <section class="campo">
+                <label for="baja">Baja:</label>
+                <input type="checkbox" id="baja" name="baja">
+            </section>
+
+            <section class="campo">
+                <label
+
+ for="lesiones">Lesiones:</label>
+                <textarea id="lesiones" name="lesiones"></textarea>
+            </section>
+
+            <section class="campo">
+                <label for="alergias">Alergias:</label>
+                <textarea id="alergias" name="alergias"></textarea>
+            </section>
+
+            <section class="campo">
+                <label for="enfermedades_cronicas">Enfermedades Crónicas:</label>
+                <textarea id="enfermedades_cronicas" name="enfermedades_cronicas"></textarea>
+            </section>
+
+            <section class="campo">
+                <label for="antecedentes">Antecedentes:</label>
+                <textarea id="antecedentes" name="antecedentes"></textarea>
+            </section>
+
+            <h2 style="text-align: center;">EN CASO DE EMERGENCIA</h2>
+
+            <section class="campo">
+                <label for="nombre_emergencia">Apellido y Nombre:</label>
+                <input type="text" id="nombre_emergencia" name="nombre_emergencia" required>
+            </section>
+
+            <section class="campo">
+                <label for="parentesco">Parentesco:</label>
+                <input type="text" id="parentesco" name="parentesco" required>
+            </section>
+
+            <section class="campo">
+                <label for="direccion_emergencia">Dirección:</label>
+                <input type="text" id="direccion_emergencia" name="direccion_emergencia" required>
+            </section>
+
+            <section class="campo">
+                <label for="localidad_emergencia">Localidad:</label>
+                <input type="text" id="localidad_emergencia" name="localidad_emergencia" required>
+            </section>
+
+            <section class="campo">
+                <label for="telefono_emergencia">Teléfono:</label>
+                <input type="text" id="telefono_emergencia" name="telefono_emergencia" required>
+            </section>
+
+            <section class="campo">
+                <label for="declaracion_a">A. Yo... (Nombre y Apellido), soy consciente de que gozo de buena salud y no tengo problemas físicos que pongan en peligro mi integridad o la de otros socios:</label>
+                <input type="text" id="declaracion_a" name="declaracion_a" required>
+            </section>
+
+            <section class="campo">
+                <label for="declaracion_b">B. Me comprometo a entregar mi Certificado de Actitud Física dentro de los 20 días como plazo máximo:</label>
+                <input type="text" id="declaracion_b" name="declaracion_b" required>
+            </section>
+
+            <section class="campo">
+                <label for="fecha_documentacion">Completó Documentación en la fecha:</label>
+                <input type="text" id="fecha_documentacion" name="fecha_documentacion" required>
+            </section>
+
+            <section class="campo">
+                <input type="submit" value="Enviar">
+            </section>
+        </form>
     </section>
-
-    <section class="campo">
-      <label for="apellido_nombre">Apellido y Nombre:</label>
-      <input type="text" id="apellido_nombre" name="apellido_nombre" required>
-    </section>
-
-    <section class="campo">
-      <label for="direccion">Dirección:</label>
-      <input type="text" id="direccion" name="direccion" required>
-    </section>
-
-    <section class="campo">
-      <label for="localidad">Localidad:</label>
-      <input type="text" id="localidad" name="localidad" required>
-    </section>
-
-    <section class="campo">
-      <label for="fecha_nacimiento">Fecha de Nacimiento:</label>
-      <input type="text" id="fecha_nacimiento" name="fecha_nacimiento" required>
-    </section>
-
-    <section class="campo">
-      <label for="edad">Edad:</label>
-      <input type="text" id="edad" name="edad" required>
-    </section>
-
-    <section class="campo">
-      <label for="dni">DNI:</label>
-      <input type="text" id="dni" name="dni" required>
-    </section>
-
-    <section class="campo">
-      <label for="telefono">Teléfono:</label>
-      <input type="text" id="telefono" name="telefono" required>
-    </section>
-
-    <section class="campo">
-      <label for="email">E-mail:</label>
-      <input type="text" id="email" name="email" required>
-    </section>
-
-    <section class="campo">
-      <label for="actividad_fisica">¿Realiza actividad física?</label>
-      <input type="text" id="actividad_fisica" name="actividad_fisica" required>
-    </section>
-
-    <section class="campo">
-      <label for="actividad_fisica_tipo">¿Cuál?</label>
-      <input type="text" id="actividad_fisica_tipo" name="actividad_fisica_tipo" required>
-    </section>
-
-    <section class="campo">
-      <label for="fuma">¿Fuma?</label>
-      <input type="text" id="fuma" name="fuma" required>
-    </section>
-
-    <section class="campo">
-      <label for="peso">Peso:</label>
-      <input type="text" id="peso" name="peso" required>
-    </section>
-
-    <section class="campo">
-      <label for="grupo_sanguineo">Grupo sanguíneo:</label>
-      <input type="text" id="grupo_sanguineo" name="grupo_sanguineo" required>
-    </section>
-
-    <section class="campo">
-      <label for="hipertenso">Hipertenso</label>
-      <input type="checkbox" id="hipertenso" name="hipertenso">
-      <label for="alta">Alta</label>
-      <input type="checkbox" id="alta" name="alta">
-      <label for="baja">Baja</label>
-      <input type="checkbox" id="baja" name="baja">
-    </section>
-
-    <section class="campo">
-      <label for="lesiones">Lesiones:</label>
-      <input type="text" id="lesiones" name="lesiones" required>
-    </section>
-
-    <section class="campo">
-      <label for="alergias">Alergias:</label>
-      <input type="text" id="alergias" name="alergias" required>
-    </section>
-
-    <section class="campo">
-      <label for="enfermedades_cronicas">Enfermedades Crónicas:</label>
-      <input type="text" id="enfermedades_cronicas" name="enfermedades_cronicas" required>
-    </section>
-
-    <section class="campo">
-      <label for="antecedentes">Antecedentes:</label>
-      <input type="text" id="antecedentes" name="antecedentes" required>
-    </section>
-
-    <h2 style="text-align: center;">EN CASO DE EMERGENCIA</h2>
-
-    <section class="campo">
-      <label for="nombre_emergencia">Apellido y Nombre:</label>
-      <input type="text" id="nombre_emergencia" name="nombre_emergencia" required>
-    </section>
-
-    <section class="campo">
-      <label for="parentesco">Parentesco:</label>
-      <input type="text" id="parentesco" name="parentesco" required>
-    </section>
-
-    <section class="campo">
-      <label for="direccion_emergencia">Dirección:</label>
-      <input type="text" id="direccion_emergencia" name="direccion_emergencia" required>
-    </section>
-
-    <section class="campo">
-      <label for="localidad_emergencia">Localidad:</label>
-      <input type="text" id="localidad_emergencia" name="localidad_emergencia" required>
-    </section>
-
-    <section class="campo">
-      <label for="telefono_emergencia">Teléfono:</label>
-      <input type="text" id="telefono_emergencia" name="telefono_emergencia" required>
-    </section>
-
-    <section class="campo">
-      <label for="declaracion_a">A. Yo... (Nombre y Apellido), soy consciente de que gozo de buena salud y no tengo problemas físicos que pongan en peligro mi integridad o la de otros socios.</label>
-      <input type="text" id="declaracion_a" name="declaracion_a" required>
-    </section>
-
-    <section class="campo">
-      <label for="declaracion_b">B. Me comprometo a entregar mi Certificado de Actitud Física dentro de los 20 días como plazo máximo.</label>
-      <input type="text" id="declaracion_b" name="declaracion_b" required>
-    </section>
-
-    <section class="campo">
-      <label for="fecha_documentacion">Completó Documentación en la fecha:</label>
-      <input type="text" id="fecha_documentacion" name="fecha_documentacion" required>
-    </section>
-
-    <p>El gimnasio no se hace responsable por objetos que se puedan extraviar.</p>
-
-    <input type="submit" value="Enviar">
-  </section>
 </body>
 </html>
+
+
 
 
