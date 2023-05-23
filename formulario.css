@@ -1,0 +1,61 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #1e3a63;
+  color: white;
+  margin: 0;
+  padding: 0;
+}
+
+                                                        /* Logo */
+
+#logo {
+  width: 300px;
+  height: auto;
+  border-radius: 50%;
+  margin: auto;
+  border: #000 2px solid;
+
+}
+
+                                                        /* Formulario */
+
+.formulario {
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+  background-color: #2d4f7c;
+  box-sizing: border-box;
+}
+
+h2 {
+  font-size: 24px;
+  text-align: center;
+  margin-top: 0;
+}
+
+.campo {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+input[type="text"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  background-color: #e1e1e1;
+  color: #1e3a63;
+}
+
+input[type="submit"] {
+  background-color: #1e3a63;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+}

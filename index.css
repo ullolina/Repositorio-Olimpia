@@ -1,21 +1,191 @@
-body {
-    background: linear-gradient(to bottom, #1e3a63, #7db9e8);
-  }
-  button {
-    transition: background-color 0.3s ease;
-  }
-  
-  button:hover {
-    background-color: #ffcc00;
-  }
-  @keyframes mover {
-    0% { left: 0; }
-    50% { left: 50%; }
-    100% { left: 100%; }
-  }
-  
-  .elemento {
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+
+                                                  /* Cabezera de la pagina */
+
+#cabeza{
+    background-color: #1e3a63;
+    height: 5rem;
+}
+
+#inicio{
+    margin-left: 45rem;
+    background-color: #1e3a63;
+    margin-top: 4rem;
+    padding: 30px 10rem 4px 60px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#inicio a{
+    background-color: #1e3a63;
     position: relative;
-    animation: mover 3s infinite;
-  }
-    
+    font-size: 1.5rem;
+    text-align: center;
+    color: #fff;
+    text-decoration: none;
+}
+
+                                              /* Animacion del logo en cabezera */
+
+#logo{
+    background-image: url(../img/WhatsApp\ Image\ 2023-05-09\ at\ 23.53.57.jpeg);
+    background-size: cover;
+    border: 1px solid black;
+    max-width: 18rem;
+    border-radius: 50%;
+    width: 11rem;
+    height: 11rem;
+    padding: 10px;
+    margin-right: auto;
+    margin-left: 2rem;
+    margin-top: -8.5rem;
+    animation-name: rotate_horizontal_center;
+    animation-duration: 3s;
+    animation-iteration-count: initial;
+    position: absolute;
+}
+
+
+@keyframes rotate_horizontal_center{
+    0%{transform:rotateX(0)}
+    100%{transform:rotateX(-360deg)}
+}
+
+                                                     /* Centro de la Pagina */
+
+#article_section{
+    background-color: #1e3a63;
+    border-radius: 8px; 
+}
+
+#funcional_article, #kungfu_article, #gap_article, #boxeo_article, #telas_article, #taekwondo_article, #defensapersonal_article{
+    border: 1px solid black;
+    text-align: center;
+    padding: 2rem 2rem;
+    margin: 2rem;
+    width: 13rem;
+    height: 13rem;
+    max-width: 18rem;
+    overflow: auto;
+    border-radius: 10px;
+    background-size: cover;
+    border: none;
+}
+
+#funcional_article{
+    background-image: url(../img/hermosa-joven-levantando-pesas-casa\ \(1\).jpg);
+}
+
+#kungfu_article{
+    background-image: url(../img/luchador-karate-pateando-pie\ \(1\).jpg);
+}
+
+#gap_article{
+    background-image: url(../img/retrato-joven-concentrado-haciendo-ejercicios-sentadillas\ \(1\).jpg);
+}
+
+#boxeo_article{
+    background-image: url(../img/retrato-cuerpo-entero-deportista-musculoso-protesis-pierna\ \(1\).jpg);
+}
+
+#telas_article{
+    background-image: url(../img/gimnasta-femenina-entrenando-lino-rojo\ \(1\).jpg);
+}
+
+#taekwondo_article{
+    background-image: url(../img/persona-equipo-proteccion-practicando-taekwondo-gimnasio\ \(1\).jpg);
+}
+
+#defensapersonal_article{
+    background-image: url(../img/mujer-fuerte-entrenando-hombre-curso-defensa-personal-gimnasio\ \(1\).jpg);
+}
+
+                                          /* Movimiento de los articulos */
+
+#funcional_article:hover{
+    background-image: url(../img/hermosa-joven-levantando-pesas-casa\ \(1\).jpg);
+    transform: scale(1.1, 1.1);
+}
+
+#kungfu_article:hover{
+    background-image: url(../img/luchador-karate-pateando-pie\ \(1\).jpg);
+    transform: scale(1.1, 1.1);
+}
+
+#gap_article:hover{
+    background-image: url(../img/retrato-joven-concentrado-haciendo-ejercicios-sentadillas\ \(1\).jpg);
+    transform: scale(1.1, 1.1);
+}
+
+#boxeo_article:hover{
+    background-image: url(../img/retrato-cuerpo-entero-deportista-musculoso-protesis-pierna\ \(1\).jpg);
+    transform: scale(1.1, 1.1);
+}
+
+#telas_article:hover{
+    background-image: url(../img/gimnasta-femenina-entrenando-lino-rojo\ \(1\).jpg);
+    transform: scale(1.1, 1.1);
+}
+
+#taekwondo_article:hover{
+    background-image: url(../img/persona-equipo-proteccion-practicando-taekwondo-gimnasio\ \(1\).jpg);
+    transform: scale(1.1, 1.1);
+}
+
+#defensapersonal_article:hover{
+    background-image: url(../img/mujer-fuerte-entrenando-hombre-curso-defensa-personal-gimnasio\ \(1\).jpg);
+    transform: scale(1.1, 1.1);
+}
+
+                                            /* Boton de los articulos del Main */
+
+#article_section article button{
+    border-radius: 5px;
+    border: none;
+    padding: 5px 5px;
+    background: none;
+    margin: 3.5rem 0rem 1rem 0rem;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+#article_section button a{
+    text-decoration: none;
+    color: #1e3a63;
+}
+
+#article_section{
+    margin: 2rem;
+    padding: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+                                                    /* Redes Sociales */
+
+#redes{
+    display: flex;
+    justify-content: space-around;
+    font-size: 2rem;
+    background-color: #1e3a63;
+    margin: 2rem 4px 1rem 4px;
+}
+
+#redes a{
+    background-color: #1e3a63;
+    color: #fff;
+    margin: 1.5rem;
+}
+
+#redes a:hover{
+    transform: scale(1.1,1.1);
+}
+
+#final{
+    background-color: #1e3a63;
+}
