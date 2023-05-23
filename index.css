@@ -1,6 +1,7 @@
 *{
     box-sizing: border-box;
     margin: 0;
+    background-color: #2d4f7c;
 }
 
                                                   /* Cabezera de la pagina */
@@ -8,24 +9,23 @@
 #cabeza{
     background-color: #1e3a63;
     height: 5rem;
+    margin-top: 4rem;
 }
 
 #inicio{
-    margin-left: 45rem;
     background-color: #1e3a63;
-    margin-top: 4rem;
-    padding: 30px 10rem 4px 60px;
-    display: flex;
-    justify-content: space-between;
+    display: block;
+    text-align: end;
+    margin: 4px 30px 4px 4px;
+    padding-top: .5rem;
 }
 
 #inicio a{
     background-color: #1e3a63;
-    position: relative;
-    font-size: 1.5rem;
-    text-align: center;
+    font-size: 1.2rem;
     color: #fff;
     text-decoration: none;
+    display: block;
 }
 
                                               /* Animacion del logo en cabezera */
@@ -151,11 +151,13 @@
     font-family: 'Roboto', sans-serif;
     font-weight: bold;
     font-size: 18px;
+    background-color: white;
 }
 
 #article_section button a{
     text-decoration: none;
     color: #1e3a63;
+    background-color: #fff;
 }
 
 #article_section{
