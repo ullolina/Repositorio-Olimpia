@@ -1,0 +1,14 @@
+.integrantes h1{
+    padding: 2rem;
+    font-size: 4rem;
+    text-align: center;
+    justify-content: center;
+}
+
+.integrantes h3{
+    padding:1rem;
+    font-size: 2rem;
+}
+.integrantes p{
+    padding-left: 1rem;
+}

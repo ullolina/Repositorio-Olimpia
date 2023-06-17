@@ -1,0 +1,46 @@
+
+
+@keyframes rotate_horizontal_center{
+    0%{transform:rotateX(0)}
+    100%{transform:rotateX(-360deg)}
+}
+
+/* Centro de la Pagina */
+.bienvenida{
+    text-shadow: 20px 10px 50px black;
+    justify-content: center;
+    text-align: justify;
+    font-size: 1.5rem;
+    padding: 1.5rem;
+   
+  
+}
+.bienvenida h1{
+    text-shadow: 5px 5px 5px black;
+    padding: 2rem;
+    font-size: 3rem;
+    text-align: center;
+}
+.bienvenida p{  
+    text-shadow: 10px 10px 5px black;
+}
+
+section p{
+    padding: 0.7rem;
+}
+
+.contenedor-video{
+    display: flex;
+    padding: 2rem;
+    width: 100%;
+    overflow: hidden;
+    justify-content: center;
+    text-align: center;
+}
+.contenedor-video iframe{
+    margin: 2rem;
+    border-radius: 5%;
+    border: 2px solid white;
+    box-shadow: 20px 10px 50px black;
+}
+

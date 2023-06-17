@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--Fonts-->
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
+  <!-- Enlace al CSS -->
+  <link rel="stylesheet" href="./assets/css/header.css">
+  <link rel="stylesheet" href="./assets/css/formulario.css">
+  <link rel="stylesheet" href="./assets/css/index.css">
+  <!-- Vinculo a Font Awesome -->
+  <script src="https://kit.fontawesome.com/15d0646bb7.js" crossorigin="anonymous"></script>
+  <title>Formulario de Inscripción</title>
+
+</head>
+
+<body>
+  <header>
+
+    <nav class="navbar">
+      <section class="contenedor">
+        <a href="./index.html">Inicio</a>
+        <a href="./servicios.html">Servicios</a>
+        <a href="./CodigoFormulario.html">Inscripcion</a>
+        <a href="./preguntas frecuentes.html">Preguntas Frecuentes</a>
+      </section>
+    </nav>
+  </header>
+  <main>
+
+    <section class="contenedor-formulario">
+      <h1>FORMULARIO DE INSCRIPCIÓN</h1>
+      <section class="formulario">
+        <form>
+          <section class="campo">
+            <label for="n_socio">N de socio:</label>
+            <input type="text" id="n_socio" name="n_socio" required>
+          </section>
+
+          <section class="campo">
+            <label for="apellido_nombre">Apellido y Nombre:</label>
+            <input type="text" id="apellido_nombre" name="apellido_nombre" required>
+          </section>
+
+          <section class="campo">
+            <label for="direccion">Dirección:</label>
+            <input type="text" id="direccion" name="direccion" required>
+          </section>
+
+          <section class="campo">
+            <label for="localidad">Localidad:</label>
+            <input type="text" id="localidad" name="localidad" required>
+          </section>
+
+          <section class="campo">
+            <label for="fecha_nacimiento">Fecha de Nacimiento:</label>
+            <input type="text" id="fecha_nacimiento" name="fecha_nacimiento" required>
+          </section>
+
+          <section class="campo">
+            <label for="edad">Edad:</label>
+            <input type="text" id="edad" name="edad" required>
+          </section>
+
+          <section class="campo">
+            <label for="dni">DNI:</label>
+            <input type="text" id="dni" name="dni" required>
+          </section>
+
+          <section class="campo">
+            <label for="telefono">Teléfono:</label>
+            <input type="number" id="telefono" name="telefono" required min="0">
+          </section>
+
+          <section class="campo">
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" pattern=".+@.+\.com" required>
+          </section>
+
+          <section class="campo">
+            <label for="actividad_fisica">¿Realiza actividad física?</label>
+            <input type="text" id="actividad_fisica" name="actividad_fisica" required>
+          </section>
+
+          <section class="campo">
+            <label for="actividad_fisica_tipo">¿Cuál?</label>
+            <input type="text" id="actividad_fisica_tipo" name="actividad_fisica_tipo" required>
+          </section>
+
+          <section class="campo">
+            <label for="fuma">¿Fuma?</label>
+            <input type="text" id="fuma" name="fuma" required>
+          </section>
+
+          <section class="campo">
+            <label for="peso">Peso:</label>
+            <input type="text" id="peso" name="peso" required>
+          </section>
+
+          <section class="campo">
+            <label for="grupo_sanguineo">Grupo sanguíneo:</label>
+            <input type="text" id="grupo_sanguineo" name="grupo_sanguineo" required>
+          </section>
+
+          <section class="campo">
+            <label for="hipertenso">Hipertenso</label>
+            <input type="checkbox" id="hipertenso" name="hipertenso">
+            <label for="alta">Alta</label>
+            <input type="checkbox" id="alta" name="alta">
+            <label for="baja">Baja</label>
+            <input type="checkbox" id="baja" name="baja">
+          </section>
+
+          <section class="campo">
+            <label for="lesiones">Lesiones:</label>
+            <input type="text" id="lesiones" name="lesiones" required>
+          </section>
+
+          <section class="campo">
+            <label for="alergias">Alergias:</label>
+            <input type="text" id="alergias" name="alergias" required>
+          </section>
+
+          <section class="campo">
+            <label for="enfermedades_cronicas">Enfermedades Crónicas:</label>
+            <input type="text" id="enfermedades_cronicas" name="enfermedades_cronicas" required>
+          </section>
+
+          <section class="campo">
+            <label for="antecedentes">Antecedentes:</label>
+            <input type="text" id="antecedentes" name="antecedentes" required>
+          </section>
+
+          <h2 >EN CASO DE EMERGENCIA</h2>
+
+          <section class="campo">
+            <label for="nombre_emergencia">Apellido y Nombre:</label>
+            <input type="text" id="nombre_emergencia" name="nombre_emergencia" required>
+          </section>
+
+          <section class="campo">
+            <label for="parentesco">Parentesco:</label>
+            <input type="text" id="parentesco" name="parentesco" required>
+          </section>
+
+          <section class="campo">
+            <label for="direccion_emergencia">Dirección:</label>
+            <input type="text" id="direccion_emergencia" name="direccion_emergencia" required>
+          </section>
+
+          <section class="campo">
+            <label for="localidad_emergencia">Localidad:</label>
+            <input type="text" id="localidad_emergencia" name="localidad_emergencia" required>
+          </section>
+
+          <section class="campo">
+            <label for="telefono_emergencia">Teléfono:</label>
+            <input type="number" id="telefono_emergencia" name="telefono_emergencia"min="0" required>
+          </section>
+
+          <section class="campo">
+            <label for="declaracion_a">A. Yo... (Nombre y Apellido), soy consciente de que gozo de buena salud y no
+              tengo
+              problemas físicos que pongan en peligro mi integridad o la de otros socios.</label>
+            <input type="text" id="declaracion_a" name="declaracion_a" required>
+          </section>
+
+          <section class="campo">
+            <label for="declaracion_b">B. Me comprometo a entregar mi Certificado de Actitud Física dentro de los 20
+              días
+              como plazo máximo.</label>
+            <input type="text" id="declaracion_b" name="declaracion_b" required>
+          </section>
+
+          <section class="campo">
+            <label for="fecha_documentacion">Completó Documentación en la fecha:</label>
+            <input type="text" id="fecha_documentacion" name="fecha_documentacion" required>
+          </section>
+
+          <p>El gimnasio no se hace responsable por objetos que se puedan extraviar.</p>
+
+          <input type="submit" value="Enviar">
+        </form>
+      </section>
+
+    </section>
+  </main>
+
+  <footer>
+    <section>
+      <ul id="redes">
+        <li>
+          <a id="iconos-redes" href="https://www.facebook.com/profile.php?id=100063669325184&mibextid=ZbWKwL"
+            target="_blank">
+            <i class="fa-brands fa-square-facebook"></i></i></a>
+        </li>
+        <li>
+          <a id="iconos-redes" href="https://twitter.com">
+            <i class="fa-brands fa-square-twitter"></i>
+          </a>
+        </li>
+        <li>
+          <a id="iconos-redes" href="https://www.instagram.com/gymolimpia.burzaco/" target="_blank">
+            <i class="fa-brands fa-square-instagram"></i></i></a>
+        </li>
+      </ul>
+      <h3 id="copyright">&copy; Copyright 2023 Codo a Codo - Comision 23038</h3>
+    </section>
+  </footer>
+  <script src="./assets/js/scripts.js"></script>
+</body>
+
+</html>

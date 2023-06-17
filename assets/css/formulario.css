@@ -1,0 +1,107 @@
+
+body {
+  font-family: "Phudu", cursive;
+  background-color: #1e3a63;
+  color: white;
+  margin: 0;
+  padding: 0;
+}
+input{
+  background-color: white;
+  color: black;
+}
+
+
+#logo {
+  width: 300px;
+  height: auto;
+}
+
+.contenedor-formulario{
+  padding: 2rem;
+  background-image: url(../image/funcional.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+}
+.contenedor-formulario img{
+  size: 2px;
+}
+.contenedor-formulario h1{
+  padding: 1rem;
+  margin: 2rem;
+}
+.formulario {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #2d4f7c;
+  box-sizing: border-box;
+  
+}
+.campo {
+  margin-bottom: 20px;
+}
+
+h1 {
+  text-shadow: 2px 5px 5px black;
+  font-size: 3rem;
+  text-align: center;
+  margin-top: 0;
+  padding: 1.4rem;
+  background: none;
+}
+h2{
+  text-shadow: 2px 5px 5px black;
+  padding: 3rem;
+  text-align: center;
+}
+p{
+  text-shadow: 2px 5px 5px black;
+}
+
+label {
+  text-shadow: 2px 5px 5px black;
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+input[type="text"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  background-color: #e1e1e1;
+  color: #1e3a63;
+  
+}
+input[type="number"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  background-color: #e1e1e1;
+  color: #1e3a63;
+  
+}
+
+input[type="submit"] {
+  background-color: #1e3a63;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  background-color: #e1e1e1;
+  color: #1e3a63;
+  
+}
+
+
