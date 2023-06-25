@@ -75,3 +75,5 @@ function showMessage(message, type) {
   messageContainer.textContent = message;
   messageContainer.className = type;
 }
+
+
